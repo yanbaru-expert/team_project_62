@@ -14,4 +14,5 @@ User.find_or_create_by!(email: email) do |user|
 end
 
 ImportCsv.import_text_data("db/csv_data/text_data.csv")
-puts "text_dataのインポートに成功しました。"
+ImportCsv.import_movie_data("db/csv_data/movie_data.csv")
+puts "CSVファイルのインポートに成功しました。"
