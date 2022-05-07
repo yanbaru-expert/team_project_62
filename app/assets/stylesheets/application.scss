@@ -8,6 +8,8 @@
  $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
+
+
  .base-container {
     margin: 0 auto;
     padding: 1rem;
@@ -30,3 +32,11 @@
   .mw-xl {
     max-width: 1200px;
   }
+  @media screen and (min-width: 768px) {
+    .navbar-toggler {
+      display: none;  
+  }
+}
+body {
+  padding-top: 56px;
+}
