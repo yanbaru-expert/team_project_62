@@ -16,3 +16,4 @@ end
 ImportCsv.import_text_data("db/csv_data/text_data.csv")
 ImportCsv.import_movie_data("db/csv_data/movie_data.csv")
 puts "CSVファイルのインポートに成功しました。"
+AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
