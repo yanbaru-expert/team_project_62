@@ -7,7 +7,9 @@ ActiveAdmin.register Text do
     # enum-help を利用
     column :genre, :post, &:genre_i18n
     column :title
-    column :content
+    column :content do |text|
+      truncate(text.content, omision: "...", length: 20)
+    end
     column :created_at
     column :updated_at
     actions
