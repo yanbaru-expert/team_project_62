@@ -11,45 +11,13 @@
         <div class="card-body text-dark ">   <!--cardのbody-->
           <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button><!--buttonsizeの変更-->
           <p class="card-textmt mt-3">
-          text.content
+          <% @texts.each do |text| %>
+          <%= text.title%>
           </p>
-         <p>【genre】</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card border-dark mb-3"><!--card全体とスタイルの指定-->
-        <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg"><!--cardの画像-->
-        <div class="card-body text-dark ">   <!--cardのbody-->
-          <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button><!--buttonsizeの変更-->
-          <p class="card-textmt mt-3">
-          text.content
+          <p>
+          【<%= text.genre %>】
+          <% end %>
           </p>
-         <p>【genre】</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card border-dark mb-3"><!--card全体とスタイルの指定-->
-        <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg"><!--cardの画像-->
-        <div class="card-body text-dark ">   <!--cardのbody-->
-          <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button><!--buttonsizeの変更-->
-          <p class="card-textmt mt-3">
-          text.content
-          </p>
-         <p>【genre】</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card border-dark mb-3"><!--card全体とスタイルの指定-->
-        <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg"><!--cardの画像-->
-        <div class="card-body text-dark ">   <!--cardのbody-->
-          <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button><!--buttonsizeの変更-->
-          <p class="card-textmt mt-3">
-          text.content
-          </p>
-         <p>【genre】</p>
         </div>
       </div>
     </div>
