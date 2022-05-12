@@ -36,6 +36,8 @@
   @extend .alert-danger;
 }
 
-.col-12.col-md-6.col-lg-4 {
-  height: 100%;
+.card {
+  height: 370px;
+  max-width: 376px;
+  margin: 0 auto;
 }
