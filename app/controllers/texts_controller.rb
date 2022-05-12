@@ -1,6 +1,7 @@
 class TextsController < ApplicationController
   
   def index
+    
     if params[:genre] == nil
       @tests = Text.where(genre:[%w[basic git ruby rails]])
     else
