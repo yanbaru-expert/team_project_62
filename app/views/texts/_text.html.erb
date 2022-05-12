@@ -1,0 +1,16 @@
+<% @texts.each do |text| %>
+    <div class="col-12 col-md-6 col-lg-4 ">
+      <div class="card border-dark mb-3">
+        <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
+        <div class="card-body text-dark ">
+          <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button>
+          <p class="card-text mt-3">
+          <%= text.title%>
+          </p>
+          <p>
+          【<%= text.genre %>】
+          </p>
+        </div>
+      </div>
+    </div>
+ <% end %>

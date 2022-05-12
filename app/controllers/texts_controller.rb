@@ -3,10 +3,9 @@ class TextsController < ApplicationController
   def index
 
     if params[:genre] == nil
-      @tests = Text.where(genre:[basic git ruby rails])
-      binding.pry
+      @texts = Text.where(genre: ["basic", "git", "ruby", "rails"])
     else
-      @tests = Text.where(genre:params[:genre])
+      @texts = Text.where(genre: params[:genre])
     end
   end
 

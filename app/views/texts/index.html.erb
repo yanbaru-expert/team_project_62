@@ -1,25 +1,8 @@
-<div class="base-container mw-xl"><!--containerという基本的な要素にcardを代入してレイアウトを整える-->
   <h1 class = "text-center mt-2 mb-4">
   Ruby/Rails
-  <br class="d-sm-none"><!--改行ポイント-->
+  <br class="d-sm-none">
   テキスト教材
-  </h1> <!--textをcenterでマージントップ、マージンボトムに配置-->
+  </h1> 
   <div class="row">
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card border-dark mb-3"><!--card全体とスタイルの指定-->
-        <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg"><!--cardの画像-->
-        <div class="card-body text-dark ">   <!--cardのbody-->
-          <button type="button" class="btn btn-secondary btn-sm btn-block">読破済み</button><!--buttonsizeの変更-->
-          <p class="card-textmt mt-3">
-          <% @texts.each do |text| %>
-          <%= text.title%>
-          </p>
-          <p>
-          【<%= text.genre %>】
-          <% end %>
-          </p>
-        </div>
-      </div>
-    </div>
+  <%= render partial: "text", collection: @texts %>
   </div>
-</div>
