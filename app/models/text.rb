@@ -1,5 +1,6 @@
 class Text < ApplicationRecord
-  RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+  RAILS_GENRE_LIST = %w[basic git ruby rails]
+
 
   with_options presence: true do
     validates :genre
@@ -9,10 +10,10 @@ class Text < ApplicationRecord
 
   enum genre: {
     invisible: 0, # 非表示
-    basic: 1,
-    git: 2,
-    ruby: 3,
-    rails: 4,
-    php: 5
+    Basic: 1,
+    Git: 2,
+    Ruby: 3,
+    Rails: 4,
+    PHP: 5
   }
 end

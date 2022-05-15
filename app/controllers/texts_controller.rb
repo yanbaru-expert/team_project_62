@@ -1,11 +1,17 @@
 class TextsController < ApplicationController
-  def index
-    @texts = if params[:genre].nil?
-               Text.where(genre: ["basic", "git", "ruby", "rails"])
-             else
-               Text.where(genre: params[:genre])
-             end
+
+ def index
+
+  if params[:genre] == nil
+    @texts = Text.all
+  else
+    @texts = Text.where(genre:[RAILS_GENRE_LIST])
   end
 
-  def show; end
+ end
+
+ def show; 
+
+ end
+
 end
