@@ -1,4 +1,5 @@
-<div>
-  <iframe width="360" height="200" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="col">
+  <%# ===== `embed_youtube`メソッドはmoviesヘルパーで定義 ===== %>
+  <%= embed_youtube(movie.url) %>
   <p><%= movie.title %></p>
 </div>
