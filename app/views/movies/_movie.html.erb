@@ -1,11 +1,13 @@
-<div class="col mb-3">
-  <div class="card border-dark">
-    <%# ===== `embed_youtube`メソッドはmoviesヘルパーで定義 ===== %>
-    <div class="card-header p-0 movie-header"><%= embed_youtube(movie.url) %></div>
+<% if Movie::RAILS_GENRE_LIST.include?(movie.genre) %>
+  <div class="col mb-3">
+    <div class="card border-dark">
+      <%# ===== `embed_youtube`メソッドはmoviesヘルパーで定義 ===== %>
+      <div class="card-header p-0 movie-header"><%= embed_youtube(movie.url) %></div>
 
-    <div class="card-body movie-body">
-      <button type="button" class="btn btn-secondary btn-block mb-4">読破済みにする</button>
-      <p><%= movie.title %></p>
+      <div class="card-body movie-body">
+        <button type="button" class="btn btn-secondary btn-block mb-4">読破済みにする</button>
+        <p>Lv.<%= movie_counter + 1 %>：<%= movie.title %></p>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
