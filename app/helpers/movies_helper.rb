@@ -1,7 +1,7 @@
 module MoviesHelper
   def embed_youtube(url)
     tag.iframe(
-      width: 360,
+      width: "100%",
       height: 200,
       src: url,
       frameborder: 0,
