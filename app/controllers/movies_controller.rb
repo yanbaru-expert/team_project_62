@@ -1,3 +1,5 @@
 class MoviesController < ApplicationController
-  def index; end
+  def index
+    @movies = Movie.order(id: :asc)
+  end
 end
