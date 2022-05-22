@@ -1,5 +1,5 @@
 module MoviesHelper
-  PHP_MOVIES_TITLE = "PHP動画教材".freeze
+  PHP_MOVIES_TITLE = "PHP 動画".freeze
   RAILS_MOVIES_TITLE = "Ruby/Rails 動画".freeze
 
   def embed_youtube(url)
