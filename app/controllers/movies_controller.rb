@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.where(genre: Movie::RAILS_GENRE_LIST).order(id: :asc)
+    @movies = Movie.switch_movies_by_genres(params)
   end
 end
