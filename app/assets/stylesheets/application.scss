@@ -44,6 +44,7 @@ body {
 
 /* max-width */
 
+
 .mw-sm {
   max-width: 576px;
 }
@@ -67,3 +68,4 @@ body {
 .alert-alert {
   @extend .alert-danger;
 }
+
