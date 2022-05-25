@@ -1,1 +1,8 @@
-<%= @text.content %>
+<h1 class = "text-center my-4" ><%= @text.title %></h1>
+<%
+    str = @text.content
+%>
+<div class="markdown">
+  <%= markdown(str) %>
+</div>
+
