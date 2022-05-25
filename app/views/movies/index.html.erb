@@ -1,0 +1,9 @@
+<div class="text-center my-4">
+  <h1><%= switch_movies_title %></h1>  <%# ===== `movies_helper:17`参照 ===== %>
+</div>
+
+<div class="container-fluid">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
+    <%= render @movies %>
+  </div>
+</div>
