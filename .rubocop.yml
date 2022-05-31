@@ -61,3 +61,6 @@ Rails/OutputSafety:
 # ===== ネストしたクラスなどの定義形式をコンパクト形式 =====
 ClassAndModuleChildren:
   EnforcedStyle: compact
+  Exclude:
+    - 'config/*'
+    - 'app/channels/**/*'
