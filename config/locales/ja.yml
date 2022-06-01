@@ -3,6 +3,7 @@ ja:
     models:
       text: 'テキスト教材'
       movie: '動画教材'
+      read_progress: '読破済み'
     attributes:
       text:
         genre: 'ジャンル'
@@ -12,6 +13,9 @@ ja:
         genre: 'ジャンル'
         title: 'タイトル'
         url: 'URL'
+      read_progress:
+        user: 'ユーザー'
+        text: 'テキスト教材'
   attributes:
     id: ID
     namespace: 名前空間
