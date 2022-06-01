@@ -1,4 +1,5 @@
 class Text < ApplicationRecord
+  has_many :read_progresses, dependent: :destroy
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
 
   with_options presence: true do

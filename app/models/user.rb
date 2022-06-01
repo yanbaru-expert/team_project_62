@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :read_progresses, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable
 
