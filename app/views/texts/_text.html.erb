@@ -3,7 +3,14 @@
     <div class="card content-card border-dark mb-3 ">
         <img src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
         <div class="card-body text-dark ">
+
+          <% if @text.read_by?(user.id)%>
           <button type="button" class="btn btn-secondary btn-md btn-block">読破済みにする</button>
+          <% else %>
+          <button type="button" class="btn btn-primary btn-md btn-block">読破済みを解除</button>
+          <% end %>
+
+
           <p class="card-text mt-3">
           <%= text.title %>
           </p>
