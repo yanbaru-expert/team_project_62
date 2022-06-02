@@ -18,9 +18,9 @@ class Text < ApplicationRecord
 
   def self.select_genre(params)
     if params == "php"
-      Text.where(genre: "php")
+      where(genre: "php")
     else
-      Text.where(genre: RAILS_GENRE_LIST)
+      where(genre: RAILS_GENRE_LIST)
     end
   end
 end
