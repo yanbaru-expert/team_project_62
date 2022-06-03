@@ -8,7 +8,7 @@ class Text < ApplicationRecord
     validates :content
   end
 
-  def read_by?(user)
+  def read_by?(user) 
     read_progresses.exists?(user_id: user.id)
   end
 
