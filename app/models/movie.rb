@@ -21,7 +21,7 @@ class Movie < ApplicationRecord
     if params[:genre] == "php"
       Movie.where(genre: "php").order(id: :asc)
     else
-      Movie.where(genre: Movie::RAILS_GENRE_LIST).order(id: :asc)
+      Movie.where(genre: RAILS_GENRE_LIST).order(id: :asc)
     end
   end
 end
