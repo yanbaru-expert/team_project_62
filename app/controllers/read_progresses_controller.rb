@@ -1,0 +1,2 @@
+class ReadProgressesController < ApplicationController
+end
