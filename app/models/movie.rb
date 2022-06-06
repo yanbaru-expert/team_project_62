@@ -1,6 +1,8 @@
 class Movie < ApplicationRecord
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
 
+  has_many :watch_progresses, dependent: :destroy
+
   with_options presence: true do
     validates :genre
     validates :title
