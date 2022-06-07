@@ -4,7 +4,15 @@
     <div class="card-header p-0 movie-header"><%= embed_youtube(movie.url) %></div>
 
     <div class="card-body movie-body">
-      <button type="button" class="btn btn-secondary btn-block mb-4">視聴済みにする</button>
+      <% if movie.watched_or_not?(current_user) %>
+        <%= link_to movie_watch_progresses_path(movie), method: :destroy do %>
+          <button type="button" class="btn btn-primary btn-block mb-4">視聴済みを解除</button>
+        <% end %>
+      <% else %>
+        <%= link_to movie_watch_progresses_path(movie), method: :post do %>
+          <button type="button" class="btn btn-secondary btn-block mb-4">視聴済みにする</button>
+        <% end %>
+      <% end %>
       <p>Lv.<%= movie_counter + @movies.offset_value + 1 %>：<%= movie.title %></p>
     </div>
   </div>
