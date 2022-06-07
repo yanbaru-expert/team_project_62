@@ -4,7 +4,16 @@
     <div class="card-header p-0 movie-header"><%= embed_youtube(movie.url) %></div>
 
     <div class="card-body movie-body">
-      <button type="button" class="btn btn-secondary btn-block mb-4">視聴済みにする</button>
+      <div id="movie-<%= movie.id %>">
+        <% if movie.watched_or_not?(current_user) %>
+          <%# =====「視聴済み」の状態 ===== %>
+          <%= render "movies/watch", movie: movie %>
+        <% else %>
+          <%# =====「視聴済みではない」状態 ===== %>
+          <%= render "movies/not_watch", movie: movie %>
+        <% end %>
+      </div>
+
       <p>Lv.<%= movie_counter + @movies.offset_value + 1 %>：<%= movie.title %></p>
     </div>
   </div>
