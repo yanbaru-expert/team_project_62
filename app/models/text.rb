@@ -15,4 +15,12 @@ class Text < ApplicationRecord
     rails: 4,
     php: 5
   }
+
+  def self.select_genre(params)
+    if params == "php"
+      where(genre: "php")
+    else
+      where(genre: RAILS_GENRE_LIST)
+    end
+  end
 end
