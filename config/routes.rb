@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :texts, only: %i[index show]
-  resources :movies, only: :index
+
+  resources :movies, only: :index do
+    resource :watch_progresses, only: %i[create destroy]
+  end
 end

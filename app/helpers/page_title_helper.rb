@@ -1,6 +1,6 @@
-module MoviesHelper
-  PHP_MOVIES_TITLE = "PHP 動画".freeze
-  RAILS_MOVIES_TITLE = "Ruby/Rails 動画".freeze
+module PageTitleHelper
+  PHP_PAGE_TITLE = "PHP".freeze
+  RAILS_PAGE_TITLE = "Ruby/Rails".freeze
 
   def embed_youtube(url)
     tag.iframe(
@@ -14,7 +14,7 @@ module MoviesHelper
   end
 
   # ===== 動画教材のタイトルを切り替える処理 =====
-  def switch_movies_title
-    params[:genre] == "php" ? PHP_MOVIES_TITLE : RAILS_MOVIES_TITLE
+  def switch_page_title
+    params[:genre] == "php" ? PHP_PAGE_TITLE : RAILS_PAGE_TITLE
   end
 end

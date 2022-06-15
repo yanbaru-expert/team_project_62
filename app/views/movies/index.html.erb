@@ -1,9 +1,13 @@
 <div class="text-center my-4">
-  <h1><%= switch_movies_title %></h1>  <%# ===== `movies_helper:17`参照 ===== %>
+  <h1><%= switch_page_title %>動画</h1>  <%# ===== page_titleヘルパー参照 ===== %>
 </div>
 
 <div class="container-fluid">
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1">
     <%= render @movies %>
   </div>
+</div>
+
+<div class="my-5">
+  <%= paginate @movies %>
 </div>
