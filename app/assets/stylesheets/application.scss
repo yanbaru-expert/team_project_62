@@ -1,0 +1,75 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import "bootstrap/scss/bootstrap";
+ 
+ a:hover {
+  text-decoration: none !important;
+}
+
+ .base-container {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* max-width */ 
+  
+  .mw-sm {
+    max-width: 576px;
+  }
+  
+  .mw-md {
+    max-width: 768px;
+  }
+  
+  .mw-lg {
+    max-width: 992px;
+  }
+  
+  .mw-xl {
+    max-width: 1200px;
+  }
+  @media screen and (min-width: 768px) {
+    .navbar-toggler {
+      display: none;  
+  }
+}
+body {
+  padding-top: 56px;
+}
+@import 'bootstrap/scss/bootstrap';
+.base-container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* max-width */
+
+
+.mw-sm {
+  max-width: 576px;
+}
+
+.mw-md {
+  max-width: 768px;
+}
+
+.mw-lg {
+  max-width: 992px;
+}
+
+.mw-xl {
+  max-width: 1200px;
+}
+
+// フラッシュ
+.alert-notice {
+  @extend .alert-success;
+}
+.alert-alert {
+  @extend .alert-danger;
+}
+
